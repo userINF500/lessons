@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 #include <math.h>
 
 // https://informatics.msk.ru/mod/statements/view.php?id=2296#1
@@ -10,7 +10,6 @@ void hyp()
     scanf("%d%d", &a, &b);
     printf("%lf", sqrt(a * a + b * b));
 }
-
 // https://informatics.msk.ru/mod/statements/view.php?id=2296&chapterid=2937#1
 void next_and_prev()
 {
