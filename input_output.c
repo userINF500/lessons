@@ -90,5 +90,15 @@ void next_and_prev()
     scanf("%d", &a);
     a=a*45 + (a/2)*5 + ((a+1)/2-1)*15;
     printf("%d %d\n", a/60 + 9, a-(a/60)*60);
-    return 0;
+}
+//https://informatics.msk.ru/mod/statements/view.php?id=2296&chapterid=2951#1
+void next_and_prev()
+{
+    int a;
+    int b;
+    int n;
+    int c;
+    scanf("%d%d%d", &a, &b, &n );
+    c = (a*100+b)*n;
+    printf("%d %d\n", c/100, c-(c/100)*100);
 }
