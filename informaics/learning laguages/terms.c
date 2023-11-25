@@ -6,8 +6,9 @@ void maximum()
 {
     int a;
     int b;
-    scanf("%d%d", &a, &b);
     int max;
+
+    scanf("%d%d", &a, &b);
     if (a>=b)
         max = a;
     else
@@ -21,6 +22,7 @@ void leap_year()
 {
     int a;
     int c;
+
     scanf("%d", &a);
     c = a % 4;
     if (c= 0)
