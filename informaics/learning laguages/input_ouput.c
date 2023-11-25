@@ -46,7 +46,7 @@ void last_num()
     int N;
 
     scanf("%d", &N);
-    printf("%d",N-(N/10)*10);
+    printf("%d",N % 10);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=2296&chapterid=2942#1
