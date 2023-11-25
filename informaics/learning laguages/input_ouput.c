@@ -1,6 +1,5 @@
 #include <stdio.h> 
 #include <math.h>
-
 // https://informatics.msk.ru/mod/statements/view.php?id=2296#1
 void hyp()
 {
@@ -26,6 +25,7 @@ void apple_division1 ()
 {
     int N;
     int K;
+
     scanf("%d%d", &N, &K);
     printf("%d",K/N);
 }
@@ -35,6 +35,7 @@ void apple_division2 ()
 {
     int N;
     int K;
+
     scanf("%d%d", &N, &K);
     printf("%d",K-(K/N)*N);
 }
@@ -43,6 +44,7 @@ void apple_division2 ()
 void last_num()
 {
     int N;
+
     scanf("%d", &N);
     printf("%d",N-(N/10)*10);
 }
@@ -51,6 +53,7 @@ void last_num()
 void tens_of_two_digit_numbers()
 {
     int N;
+
     scanf("%d", &N);
     printf("%d",N/10);
 }
@@ -59,6 +62,7 @@ void tens_of_two_digit_numbers()
 void number_of_decades()
 {
     int N;
+
     scanf("%d", &N);
     printf("%d",(N-100)/10);
 }
@@ -67,6 +71,7 @@ void number_of_decades()
 void summ_of_numbers ()
 {
     int N;
+
     scanf("%d", &N);
     printf("%d",N/100 + (N-(N/10)*10)+((N-100)/10));
 }
@@ -75,6 +80,7 @@ void summ_of_numbers ()
 void next_even_num()
 {
     int N;
+
     scanf("%d", &N);
     printf("%d",(N/2+1)*2);
 }
@@ -85,6 +91,7 @@ void mean_changing ()
     int a;
     int b;
     int c;
+
     scanf("%d%d", &a, &b);
     c=b;
     b=a;
@@ -96,6 +103,7 @@ void mean_changing ()
 void end_of_lessons()
 {
     int a;
+    
     scanf("%d", &a);
     a=a*45 + (a/2)*5 + ((a+1)/2-1)*15;
     printf("%d %d\n", a/60 + 9, a-(a/60)*60);
