@@ -21,8 +21,8 @@ void leap_year()
 {
     int a;
     int c;
+    scanf("%d", &a);
     c = a % 4;
-    scanf("%d", a);
     if (c= 0)
         printf("YES");
     else
