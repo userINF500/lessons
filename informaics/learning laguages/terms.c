@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <math.h>
-// https://informatics.msk.ru/mod/statements/view.php?id=276#1
 
+// https://informatics.msk.ru/mod/statements/view.php?id=276#1
 void maximum()
 {
     int a;
@@ -17,7 +17,6 @@ void maximum()
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=276&chapterid=253#1
-
 void leap_year()
 {
     int a;
