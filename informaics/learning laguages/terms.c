@@ -9,10 +9,10 @@ void maximum()
     int max;
 
     scanf("%d%d", &a, &b);
-    if (a>=b)
+    if (a >= b)
         max = a;
     else
-        max =b;
+        max = b;
     printf("%d", max);
 }
 
@@ -24,7 +24,7 @@ void leap_year()
 
     scanf("%d", &a);
     c = a % 4;
-    if (c= 0)
+    if (c = 0)
         printf("YES");
     else
         printf("NO");
