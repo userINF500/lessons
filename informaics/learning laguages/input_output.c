@@ -38,7 +38,7 @@ void apple_division2 ()
     int K;
 
     scanf("%d%d", &N, &K);
-    printf("%d",K - (K/N) * N);
+    printf("%d",K - K % N);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=2296&chapterid=2941#1
@@ -106,8 +106,8 @@ void end_of_lessons()
     int a;
     
     scanf("%d", &a);
-    a=a*45 + (a/2)*5 + ((a+1)/2-1)*15;
-    printf("%d %d\n", a / 60 + 9, a - (a / 60) * 60);
+    a=a * 45 + (a / 2) * 5 + ( (a + 1) / 2 - 1) * 15;
+    printf("%d %d\n", a / 60 + 9, a - a % 60);
 }
 
 int main()
