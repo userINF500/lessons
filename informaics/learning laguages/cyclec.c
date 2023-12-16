@@ -22,7 +22,7 @@ void factorial()
     int N;
     int i;
     int result;
-    result=1;
+    result = 1;
 
     scanf("%d", &N);
     for (i = 1; i <= N; i++)
@@ -62,7 +62,7 @@ void geometrical_progression()
     scanf("%d%d", &a, &n);
     for (i = 1; i <= n; i++)
     {
-        result = result*n;
+        result = result * n;
         sum += result;
     }
     printf("%d", sum);
@@ -79,7 +79,7 @@ void list_of_squares()
     while(i * i <N)
     { 
         printf("%d", i * i);
-        i = i + 1;
+        i ++ ;
     }
 }
 
