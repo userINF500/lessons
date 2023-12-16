@@ -27,7 +27,7 @@ void apple_division1 ()
     int N;
     int K;
 
-    scanf("%d%d", &N, &K);
+    scanf("%d %d", &N, &K);
     printf("%d",K / N);
 }
 
