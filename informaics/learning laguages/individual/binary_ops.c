@@ -34,8 +34,10 @@ int pow2(int num, int pow)
 int main()
 {
     int a;
-    scanf ("%d", &a);
-    a = pow2(a, 2);
+    int st;
+
+    scanf ("%d%d", &a, &st);
+    a = pow2(a, st);
     printf("%d", a);
     return 0;
 }
