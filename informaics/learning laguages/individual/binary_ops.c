@@ -18,7 +18,7 @@ int div2(int num)
 
 int set_bit (int num, int pos)
 {
-    return num ^ (1 << (pos - 1) );
+    return num | ( (1 << pos ) >> 1);
 }
 
 int div_pow2(int num, int pow)
@@ -37,7 +37,7 @@ int main()
     int st;
 
     scanf ("%d%d", &a, &st);
-    a = pow2(a, st);
+    a = set_bit(a, st);
     printf("%d", a);
     return 0;
 }
