@@ -88,5 +88,4 @@ int main()
     list_of_squares();
     geometrical_progression();
     return 0;
-    
 }
