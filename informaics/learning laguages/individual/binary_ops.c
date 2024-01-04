@@ -18,7 +18,7 @@ int div2(int num)
 
 int set_bit (int num, int pos)
 {
-    return num | (1 << pos );
+    return num | (1 << pos);
 }
 
 int div_pow2(int num, int pow)
