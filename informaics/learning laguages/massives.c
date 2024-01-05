@@ -23,14 +23,14 @@ void A0_A2_A4()
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=64#1
 void write_even_numbers()
 {
-    int N, i, j;
+    int N, k, j;
     
     scanf("%d", &N);
     int arr[N];
 
-    for ( i = 0; i < N; i++)
+    for ( k = 0; k < N; k++)
     {
-        scanf ("%d", &arr[i]);
+        scanf ("%d", &arr[k]);
     } 
 
     for (j = 0; j < N; j ++)
