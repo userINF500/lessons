@@ -39,7 +39,6 @@ void write_even_numbers()
         {
             printf("%d ", arr[j]);
         }
-
     }
 }
 
