@@ -28,7 +28,7 @@ void write_even_numbers()
     scanf("%d", &N);
     int arr[N];
 
-    for ( k = 0; k < N; k++)
+    for (k = 0; k < N; k++)
     {
         scanf ("%d", &arr[k]);
     } 
@@ -42,8 +42,31 @@ void write_even_numbers()
     }
 }
 
+// https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=65#1
+void The_number_of_positive_elements()
+{
+    int N, m, j, k;
+    
+    scanf("%d", &N);
+    int arr1[N];
+
+    for (m = 0; m < N; m++)
+    {
+        scanf ("%d", &arr1[m]);
+    } 
+    
+    for (j = 0; j < N; j ++)
+    {
+        if (arr1[j] > 0)
+        {
+            k += 1;
+        }
+    }
+    printf("%d", k);
+}
+
 int main ()
 {
-    write_even_numbers();
+    The_number_of_positive_elements();
     return 0;
 }
