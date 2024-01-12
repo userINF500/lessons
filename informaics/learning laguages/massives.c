@@ -46,7 +46,7 @@ void write_even_numbers()
 void The_number_of_positive_elements()
 {
     int N, m, j, k;
-    
+    k = 0;
     scanf("%d", &N);
     int arr1[N];
 
@@ -58,6 +58,29 @@ void The_number_of_positive_elements()
     for (j = 0; j < N; j ++)
     {
         if (arr1[j] > 0)
+        {
+            k += 1;
+        }
+    }
+    printf("%d", k);
+}
+
+// https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=66#1
+void number_of_elements_which_are_large_then_prev()
+{
+    int N, m, j, k;
+    k = 0;
+    scanf("%d", &N);
+    int arr1[N];
+
+    for (m = 0; m < N; m++)
+    {
+        scanf ("%d", &arr1[m]);
+    } 
+    
+    for (j = 0; j < N - 1; j ++)
+    {
+        if (arr1[j] < arr1[j + 1])
         {
             k += 1;
         }
