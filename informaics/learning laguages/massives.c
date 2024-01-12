@@ -66,7 +66,7 @@ void The_number_of_positive_elements()
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=66#1
-void number_of_elements_which_are_large_then_prev()
+void large_then_prev()
 {
     int N, m, j, k;
     k = 0;
@@ -89,7 +89,7 @@ void number_of_elements_which_are_large_then_prev()
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=67#1
-void Are_there_two_elements_with_the_same_signs()
+void two_elements_with_the_same_signs()
 {
     int N, m, j, k;
     k = 0;
@@ -119,8 +119,31 @@ void Are_there_two_elements_with_the_same_signs()
     }
 }
 
+// https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=68#1
+void large_then_neighbours()
+{
+    int N, m, j, k;
+    k = 0;
+    scanf("%d", &N);
+    int arr1[N];
+
+    for (m = 0; m < N; m++)
+    {
+        scanf ("%d", &arr1[m]);
+    } 
+    
+    for (j = 0; j < N - 1; j ++)
+    {
+        if (arr1[j] < arr1[j + 1] && arr1[j + 1] > arr1[j + 2])
+        {
+            k += 1;
+        }
+    }
+    printf("%d", k);
+}
+
 int main ()
 {
-    Are_there_two_elements_with_the_same_signs();
+    large_then_neighbours();
     return 0;
 }
