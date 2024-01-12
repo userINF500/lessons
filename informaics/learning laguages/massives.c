@@ -88,8 +88,39 @@ void number_of_elements_which_are_large_then_prev()
     printf("%d", k);
 }
 
+// https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=67#1
+void Are_there_two_elements_with_the_same_signs()
+{
+    int N, m, j, k;
+    k = 0;
+    scanf("%d", &N);
+    int arr1[N];
+
+    for (m = 0; m < N; m++)
+    {
+        scanf ("%d", &arr1[m]);
+    } 
+    
+    for (j = 0; j < N - 1; j ++)
+    {
+        if (arr1[j] * arr1[j + 1] > 0)
+        {
+            k += 1;
+        }
+    }
+
+    if (k > 0)
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+}
+
 int main ()
 {
-    The_number_of_positive_elements();
+    Are_there_two_elements_with_the_same_signs();
     return 0;
 }
