@@ -1,43 +1,48 @@
 #include <stdio.h> 
+#include <stdlib.h>
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208#1
 void A0_A2_A4()
 {
-    int N, i, j;
+    int N, i, j, *p;
     
     scanf("%d", &N);
     int A[N];
+    p = malloc(N * sizeof(int));
+    
 
     for ( i = 0; i < N; i++)
     {
-        scanf ("%d", &A[i]);
+        scanf ("%d", &p[i]);
     } 
 
     for (j = 0; j < N; j += 2)
     {
-        printf("%d ", A[j]);
+        printf("%d ", p[j]);
     }
+    free(p);
     
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=64#1
 void write_even_numbers()
 {
-    int N, k, j;
+    int N, k, j, *p;
     
     scanf("%d", &N);
     int arr[N];
+    p = malloc(N * sizeof(int));
 
     for (k = 0; k < N; k++)
     {
-        scanf ("%d", &arr[k]);
+        scanf ("%d", &p[k]);
     } 
 
     for (j = 0; j < N; j ++)
     {
-        if (arr[j] % 2  == 0)
+        if (p[j] % 2  == 0)
         {
-            printf("%d ", arr[j]);
+            printf("%d ", p[j]);
         }
     }
 }
@@ -45,19 +50,21 @@ void write_even_numbers()
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=65#1
 void The_number_of_positive_elements()
 {
-    int N, m, j, k;
+    int N, i, j, k, *p;
+
     k = 0;
     scanf("%d", &N);
     int arr1[N];
+    p = malloc(N * sizeof(int));
 
-    for (m = 0; m < N; m++)
+    for (i = 0; i < N; i++)
     {
-        scanf ("%d", &arr1[m]);
+        scanf ("%d", &p[i]);
     } 
     
     for (j = 0; j < N; j ++)
     {
-        if (arr1[j] > 0)
+        if (p[j] > 0)
         {
             k += 1;
         }
@@ -68,19 +75,21 @@ void The_number_of_positive_elements()
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=66#1
 void large_then_prev()
 {
-    int N, m, j, k;
+    int N, i, j, k, *p;
+
     k = 0;
     scanf("%d", &N);
     int arr1[N];
+    p = malloc(N * sizeof(int));
 
-    for (m = 0; m < N; m++)
+    for (i = 0; i < N; i++)
     {
-        scanf ("%d", &arr1[m]);
+        scanf ("%d", &p[i]);
     } 
     
     for (j = 0; j < N - 1; j ++)
     {
-        if (arr1[j] < arr1[j + 1])
+        if (p[j] < p[j + 1])
         {
             k += 1;
         }
@@ -91,19 +100,21 @@ void large_then_prev()
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=67#1
 void two_elements_with_the_same_signs()
 {
-    int N, m, j, k;
+    int N, i, j, k, *p;
+
     k = 0;
     scanf("%d", &N);
     int arr1[N];
+    p = malloc(N * sizeof(int));
 
-    for (m = 0; m < N; m++)
+    for (i = 0; i < N; i++)
     {
-        scanf ("%d", &arr1[m]);
+        scanf ("%d", &p[i]);
     } 
     
     for (j = 0; j < N - 1; j ++)
     {
-        if (arr1[j] * arr1[j + 1] > 0)
+        if (p[j] * p[j ++] > 0)
         {
             k += 1;
         }
@@ -122,24 +133,27 @@ void two_elements_with_the_same_signs()
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=68#1
 void large_then_neighbours()
 {
-    int N, m, j, k;
+    int N, i, j, k,*p;
+
     k = 0;
     scanf("%d", &N);
     int arr1[N];
+    p = malloc(N * sizeof(int));
 
-    for (m = 0; m < N; m++)
+    for (i = 0; i < N; i++)
     {
-        scanf ("%d", &arr1[m]);
+        scanf ("%d", &p[i]);
     } 
     
-    for (j = 0; j < N - 1; j ++)
+    for (j = 0; j < N - 1; j++)
     {
-        if (arr1[j] < arr1[j + 1] && arr1[j + 1] > arr1[j + 2])
+        if (p[j] < p[j + 1] && p[j + 1] > p[j + 2])
         {
             k += 1;
         }
     }
     printf("%d", k);
+    free(p);
 }
 
 int main ()
