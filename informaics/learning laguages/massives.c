@@ -45,6 +45,7 @@ void write_even_numbers()
             printf("%d ", p[j]);
         }
     }
+    free(p);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=65#1
@@ -70,6 +71,7 @@ void The_number_of_positive_elements()
         }
     }
     printf("%d", k);
+    free(p);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=66#1
@@ -95,6 +97,7 @@ void large_then_prev()
         }
     }
     printf("%d", k);
+    free(p);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=67#1
@@ -128,6 +131,7 @@ void two_elements_with_the_same_signs()
     {
         printf("NO");
     }
+    free(p);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=208&chapterid=68#1
