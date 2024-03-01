@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
-int prost(int k)
+int is_prime(int k)
 {
     int s = 0;
 
-     for (int i = 1; i <= round(sqrt(k)); i++)
+    for (int i = 1; i <= sqrt(k); i++)
     {
         if (k % i == 0)
         {
@@ -13,38 +13,26 @@ int prost(int k)
         }
     }
 
-    if (s == 1 && k != 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return (s == 1 && k != 1);
 }
 
 void decompose_into_prime_factors()
 {
-    int a,s;
-    s = 1;
+    int a;
+    int s = 1;
 
     scanf("%d", &a);
-    if (a == 1)
-        {
-            printf("1 нельзя разложить");
-        }
-    else
+    if (a != 1)
     {
         while(a != 1)
         {   
-            if (prost(s) == 1 && a % s == 0) 
+            if (is_prime(s) == 1 && a % s == 0) 
             {
-                a/= s;
-                printf("%d ",s);
+                a /= s;
             }
             else
             {
-                s += 1;
+                s ++;
             }
         }
     }
@@ -52,33 +40,33 @@ void decompose_into_prime_factors()
 
 void sum_of_dividers()
 {
-    int a,s;
-    s = 0;
+    int a;
+    int s = 0;
+
     scanf("%d", &a);
-    for (int i =1; i<= round(sqrt(a)); i++)
+    for (int i = 1; i <= sqrt(a); i++)
     {
         if (a % i == 0)
         {
-            s+=i;
-            s+= a/i;
+            s += i;
+            s += a / i;
         }
     }
-    printf("%d",s);
 }
 
 void number_of_dividers()
 {
-    int a,s;
-    s = 0;
+    int a;
+    int s = 0;
+
     scanf("%d", &a);
-    for (int i =1; i<= round(sqrt(a)); i++)
+    for (int i = 1; i <= sqrt(a); i++)
     {
         if (a % i == 0)
         {
-            s+=1;
+            s++;
         }
     }
-    printf("%d", 2*s);
 }
 
 int main()

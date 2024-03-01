@@ -2,8 +2,8 @@
 
 size_t strlen(const char *str)
 {
-    int s,i = 0;
     size_t size = 0;
+    
     while (str[size] != 0)
     {
         ++size;
