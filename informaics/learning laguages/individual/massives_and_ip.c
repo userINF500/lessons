@@ -18,7 +18,6 @@ void fillArray()
     printf("Enter the range [a; b]: ");
     scanf("%d %d", &a, &b);
 
-    int arr[size];
     p = malloc(size * sizeof(int));
 
     fill(p, size, a, b);
@@ -67,18 +66,17 @@ void massive_of_ip_packets() {
     struct IpHeader packetHeaders[packetCount];
 
     for (int i = 0; i < packetCount; i++) {
-        struct IpHeader *header = &packetHeaders[i];
-        header->version = 4;
-        header->headerLength = 5;
-        header->serviceType = (unsigned char)rand();
-        header->totalLength = (unsigned short)rand();
-        header->identification = (unsigned short)rand();
-        header->flagsAndOffset = (unsigned short)rand();
-        header->timeToLive = (unsigned char)rand();
-        header->protocol = (unsigned char)rand();
-        header->checksum = (unsigned short)rand();
-        header->sourceAddress =(unsigned int)rand();
-        header->destinationAddress = (unsigned int)rand();
+        packetHeaders[i].version = 4;
+        packetHeaders[i].headerLength = 5;
+        packetHeaders[i].serviceType = (unsigned char)rand();
+        packetHeaders[i].totalLength = (unsigned short)rand();
+        packetHeaders[i].identification = (unsigned short)rand();
+        packetHeaders[i].flagsAndOffset = (unsigned short)rand();
+        packetHeaders[i].timeToLive = (unsigned char)rand();
+        packetHeaders[i].protocol = (unsigned char)rand();
+        packetHeaders[i].checksum = (unsigned short)rand();
+        packetHeaders[i].sourceAddress =(unsigned int)rand();
+        packetHeaders[i].destinationAddress = (unsigned int)rand();
     }
     
      for (int i = 0; i < packetCount; i++) 
