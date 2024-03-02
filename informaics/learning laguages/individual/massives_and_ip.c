@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,36 +30,22 @@ void fillArray()
     free(p);
 }
 
-struct IpHeader 
+typedef struct IpHeader 
 {
-    unsigned char version;      
-    unsigned char headerLength;
-    unsigned char serviceType;  
-    unsigned short totalLength; 
-    unsigned short identification; 
-    unsigned short flagsAndOffset; 
-    unsigned char timeToLive;   
-    unsigned char protocol;     
-    unsigned short checksum;    
-    unsigned int sourceAddress; 
-    unsigned int destinationAddress; 
-};
+    unsigned char version:4;
+    unsigned char hdr_size:4;
 
-void printIpHeaderFields(const struct IpHeader *header) 
-{
-    printf("Версия: %02x\n", header->version);
-    printf("Длина заголовка: %02x\n", header->headerLength);
-    printf("Тип сервиса: %02x\n", header->serviceType);
-    printf("Общая длина пакета: %04x\n", header->totalLength);
-    printf("Идентификатор пакета: %04x\n", header->identification);
-    printf("Флаги и смещение фрагмента: %04x\n", header->flagsAndOffset);
-    printf("Время жизни пакета: %02x\n", header->timeToLive);
-    printf("Протокол верхнего уровня: %02x\n", header->protocol);
-    printf("Контрольная сумма заголовка: %04x\n", header->checksum);
-    printf("Адрес отправителя: %08x\n", header->sourceAddress);
-    printf("Адрес получателя: %08x\n", header->destinationAddress);
+}t_ipV4;
+
+
+void bits_field(const struct IpHeader *hdr)
+{ 
+    unsigned char *ptr = (unsigned char *)&hdr;
+    printf("Struct size = %zu\n", sizeof(hdr));
+    printf("Content = %hhx\n", *ptr);
+    printf("Version = %hhx\n", hdr->version);
+    printf("Size = %#hhx\n", hdr->hdr_size);
 }
-
 
 void massive_of_ip_packets() {
     const int packetCount = 10; 
@@ -66,23 +53,15 @@ void massive_of_ip_packets() {
     struct IpHeader packetHeaders[packetCount];
 
     for (int i = 0; i < packetCount; i++) {
-        packetHeaders[i].version = 4;
-        packetHeaders[i].headerLength = 5;
-        packetHeaders[i].serviceType = (unsigned char)rand();
-        packetHeaders[i].totalLength = (unsigned short)rand();
-        packetHeaders[i].identification = (unsigned short)rand();
-        packetHeaders[i].flagsAndOffset = (unsigned short)rand();
-        packetHeaders[i].timeToLive = (unsigned char)rand();
-        packetHeaders[i].protocol = (unsigned char)rand();
-        packetHeaders[i].checksum = (unsigned short)rand();
-        packetHeaders[i].sourceAddress =(unsigned int)rand();
-        packetHeaders[i].destinationAddress = (unsigned int)rand();
+        packetHeaders[i].version = (unsigned char)rand();
+        packetHeaders[i].hdr_size = (unsigned char)rand();
+        
     }
-    
+
      for (int i = 0; i < packetCount; i++) 
     {
-        printf("Пакет %d:\n", i + 1);
-        printIpHeaderFields(&packetHeaders[i]);
+        printf("packet %d:\n", i + 1);
+       bits_field(&packetHeaders[i]);
         printf("\n");
     }
 }
