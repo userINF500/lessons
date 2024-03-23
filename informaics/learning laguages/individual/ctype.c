@@ -28,3 +28,13 @@ int isspace(int c)
 {
     return (c == ' ' || c == '\t' || c == '\n' || c == '\r');
 }
+
+int main ()
+{
+    char a = 'A';
+    if (isupper(a))
+    {
+         printf("your sympol is uppercase letter");
+    }
+    return 0;
+}
